@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +8,10 @@ import { CreateEmployeeComponent } from './components/create-employee/create-emp
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { UpdateEmployeeComponent } from './components/update-employee/update-employee.component';
+import { TestComponent } from './components/test/test.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { RouteGuardService } from './service/route-guard.service';
+import { DeactivateGuardService } from './service/deactivate-guard.service';
 
 @NgModule({
   declarations: [
@@ -15,14 +19,20 @@ import { UpdateEmployeeComponent } from './components/update-employee/update-emp
     ListEmployeeComponent,
     CreateEmployeeComponent,
     HomeComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ 
+    provideAnimationsAsync(),
+    provideClientHydration(),
+    RouteGuardService,
+    DeactivateGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
