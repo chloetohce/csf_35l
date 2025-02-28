@@ -1,1 +1,9 @@
-<p>home works!</p>
+
+<form action="" [formGroup]="form" (submit)="processForm()">
+    <select name="country" id="" formControlName="country">
+        @for (c of data; track $index) {
+            <option value="{{c.name}}">{{c.name}}</option>
+        }
+    </select>
+    <button type="submit">Submit</button>
+</form>

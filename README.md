@@ -13,3 +13,9 @@ Generate a new module without `--routing=false`.
     - imports: [RouterModule.forRoot(routes)]
     - exports: [RouterModule]
 4. In the main app module, add the `app-routing` module.
+
+## Notes
+
+To read Json files, need to add `"resolveJsonModule": true` in the `tsconfig.json` file. 
+
+Also import it as jsonData from the relative file path. See [here](src/app/components/test/test.component.ts)
