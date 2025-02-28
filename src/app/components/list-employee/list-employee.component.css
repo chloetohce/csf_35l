@@ -1,0 +1,14 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.row p {
+    width: fit-content;
+}
+
+.row div {
+    width: fit-content;
+}

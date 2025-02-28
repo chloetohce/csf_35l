@@ -1,0 +1,9 @@
+@for (emp of employees; let i = $index; track i) {
+    <div class="row">
+        <p>{{emp.name}}</p>
+        <p>{{emp.email}}</p>
+        <div>
+            <button type="button">Update</button>
+        </div>
+    </div>
+}

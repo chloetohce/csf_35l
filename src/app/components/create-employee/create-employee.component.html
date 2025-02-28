@@ -1,0 +1,19 @@
+
+<form action="" [formGroup]="form" (submit)="processForm()">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" formControlName="name">
+            </td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>
+                <input type="text" formControlName="email">
+            </td>
+        </tr>
+    </table>
+
+    <button type="submit">Submit</button>
+</form>
