@@ -12,6 +12,7 @@ import { TestComponent } from './components/test/test.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { RouteGuardService } from './service/route-guard.service';
 import { DeactivateGuardService } from './service/deactivate-guard.service';
+import { DebounceComponent } from './components/debounce/debounce.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DeactivateGuardService } from './service/deactivate-guard.service';
     CreateEmployeeComponent,
     HomeComponent,
     UpdateEmployeeComponent,
-    TestComponent
+    TestComponent,
+    DebounceComponent
   ],
   imports: [
     BrowserModule,

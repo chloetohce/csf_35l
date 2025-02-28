@@ -8,6 +8,7 @@ import { UpdateEmployeeComponent } from './components/update-employee/update-emp
 import { RouteGuardService } from './service/route-guard.service';
 import { TestComponent } from './components/test/test.component';
 import { DeactivateGuardService } from './service/deactivate-guard.service';
+import { DebounceComponent } from './components/debounce/debounce.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent}, // Should be placed at the top
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'employees/create', component: CreateEmployeeComponent},
   {path: 'employees/update/:id', component: UpdateEmployeeComponent, canActivate: [RouteGuardService]},
   {path: 'test', component: TestComponent, canDeactivate: [DeactivateGuardService]},
+  {path: 'debounce', component: DebounceComponent},
   {path: '**', redirectTo: '/', pathMatch: 'full'}
 ];
 
